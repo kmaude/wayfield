@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
+import heroOwnerAsset from "@/assets/hero-owner.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
