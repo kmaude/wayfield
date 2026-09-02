@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ForYourBusinessRouteImport } from './routes/for-your-business'
+import { Route as GetStartedRouteImport } from './routes/get-started'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as WhyWayfieldRouteImport } from './routes/why-wayfield'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForYourBusinessRoute = ForYourBusinessRouteImport.update({
+  id: '/for-your-business',
+  path: '/for-your-business',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GetStartedRoute = GetStartedRouteImport.update({
+  id: '/get-started',
+  path: '/get-started',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyWayfieldRoute = WhyWayfieldRouteImport.update({
+  id: '/why-wayfield',
+  path: '/why-wayfield',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/for-your-business': typeof ForYourBusinessRoute
+  '/get-started': typeof GetStartedRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/packages': typeof PackagesRoute
+  '/why-wayfield': typeof WhyWayfieldRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/for-your-business': typeof ForYourBusinessRoute
+  '/get-started': typeof GetStartedRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/packages': typeof PackagesRoute
+  '/why-wayfield': typeof WhyWayfieldRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/for-your-business': typeof ForYourBusinessRoute
+  '/get-started': typeof GetStartedRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/packages': typeof PackagesRoute
+  '/why-wayfield': typeof WhyWayfieldRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/faq'
+    | '/for-your-business'
+    | '/get-started'
+    | '/how-it-works'
+    | '/packages'
+    | '/why-wayfield'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/faq'
+    | '/for-your-business'
+    | '/get-started'
+    | '/how-it-works'
+    | '/packages'
+    | '/why-wayfield'
+  id:
+    | '__root__'
+    | '/'
+    | '/faq'
+    | '/for-your-business'
+    | '/get-started'
+    | '/how-it-works'
+    | '/packages'
+    | '/why-wayfield'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FaqRoute: typeof FaqRoute
+  ForYourBusinessRoute: typeof ForYourBusinessRoute
+  GetStartedRoute: typeof GetStartedRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  PackagesRoute: typeof PackagesRoute
+  WhyWayfieldRoute: typeof WhyWayfieldRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-your-business': {
+      id: '/for-your-business'
+      path: '/for-your-business'
+      fullPath: '/for-your-business'
+      preLoaderRoute: typeof ForYourBusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/get-started': {
+      id: '/get-started'
+      path: '/get-started'
+      fullPath: '/get-started'
+      preLoaderRoute: typeof GetStartedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-wayfield': {
+      id: '/why-wayfield'
+      path: '/why-wayfield'
+      fullPath: '/why-wayfield'
+      preLoaderRoute: typeof WhyWayfieldRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FaqRoute: FaqRoute,
+  ForYourBusinessRoute: ForYourBusinessRoute,
+  GetStartedRoute: GetStartedRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  PackagesRoute: PackagesRoute,
+  WhyWayfieldRoute: WhyWayfieldRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
