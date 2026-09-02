@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import heroOwnerAsset from "@/assets/hero-owner.png.asset.json";
 import mainStreetAsset from "@/assets/main-street.png.asset.json";
+import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -144,7 +145,7 @@ function Index() {
       {/* Why Wayfield teaser */}
       <Section tone="cream">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <PhotoPlaceholder aspect="aspect-[5/4]" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" image={whiteboardPlanAsset.url} alt="Person sketching a marketing plan on a whiteboard" />
           <div>
             <SectionHeading eyebrow="Why Wayfield" title="Built by people who've actually run agencies." />
             <p className="body-lg mt-6">
