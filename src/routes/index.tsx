@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 import heroOwnerAsset from "@/assets/hero-owner.png.asset.json";
+import mainStreetAsset from "@/assets/main-street.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -120,7 +121,7 @@ function Index() {
       </Section>
 
       {/* Industry teaser */}
-      <PhotoHero minHeight="min-h-[460px] md:min-h-[520px]">
+      <PhotoHero minHeight="min-h-[460px] md:min-h-[520px]" backgroundImage={mainStreetAsset.url}>
         <div className="max-w-3xl">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
             We know local services, restaurants, and professional practices because that's who we
