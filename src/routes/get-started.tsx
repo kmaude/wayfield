@@ -67,10 +67,17 @@ function GetStarted() {
           ) : (
             <form onSubmit={onSubmit} className="flex flex-col gap-6 rounded-3xl bg-card p-8 shadow-card md:p-10">
               <div className="flex flex-col gap-2">
+                <label htmlFor="name" className={labelClass}>
+                  Your name
+                </label>
+                <input id="name" name="name" type="text" required maxLength={100} className={fieldClass} placeholder="e.g. Jordan Smith" />
+              </div>
+
+              <div className="flex flex-col gap-2">
                 <label htmlFor="business" className={labelClass}>
                   Business name
                 </label>
-                <input id="business" name="business" required className={fieldClass} placeholder="e.g. Maple Street Plumbing" />
+                <input id="business" name="business" type="text" required maxLength={100} className={fieldClass} placeholder="e.g. Maple Street Plumbing" />
               </div>
 
               <div className="flex flex-col gap-2">
@@ -92,14 +99,14 @@ function GetStarted() {
                 <label htmlFor="links" className={labelClass}>
                   Website or social profiles <span className="font-normal text-slate">(optional)</span>
                 </label>
-                <input id="links" name="links" className={fieldClass} placeholder="yourbusiness.com, @yourbusiness" />
+                <input id="links" name="links" type="text" maxLength={255} className={fieldClass} placeholder="yourbusiness.com, @yourbusiness" />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="headache" className={labelClass}>
                   What's your biggest marketing headache right now?
                 </label>
-                <textarea id="headache" name="headache" required rows={4} className={fieldClass} placeholder="Tell us in your own words." />
+                <textarea id="headache" name="headache" required rows={4} maxLength={1000} className={fieldClass} placeholder="Tell us in your own words." />
               </div>
 
               <div className="flex flex-col gap-2">
@@ -116,11 +123,20 @@ function GetStarted() {
                 </select>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label htmlFor="contact" className={labelClass}>
-                  Best way to reach you <span className="font-normal text-slate">(email or phone)</span>
-                </label>
-                <input id="contact" name="contact" required className={fieldClass} placeholder="you@example.com or (555) 123-4567" />
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className={labelClass}>
+                    Email
+                  </label>
+                  <input id="email" name="email" type="email" required maxLength={255} className={fieldClass} placeholder="you@example.com" />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="phone" className={labelClass}>
+                    Phone number
+                  </label>
+                  <input id="phone" name="phone" type="tel" required maxLength={30} className={fieldClass} placeholder="(555) 123-4567" />
+                </div>
               </div>
 
               <PillButton type="submit" variant="cta" size="lg" className="mt-2 w-full sm:w-auto sm:self-start">
