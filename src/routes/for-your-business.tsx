@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
+import consultationAsset from "@/assets/consultation.png.asset.json";
+import landscaperAsset from "@/assets/landscaper.png.asset.json";
+import mainStreetAsset from "@/assets/main-street.png.asset.json";
+import restaurantOwnerAsset from "@/assets/restaurant-owner.png.asset.json";
 import { PhotoHero } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section } from "@/components/Section";
