@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 44 32"
+      viewBox="0 0 50 32"
       aria-hidden="true"
       className={cn("h-7 w-auto", className)}
       fill="none"
