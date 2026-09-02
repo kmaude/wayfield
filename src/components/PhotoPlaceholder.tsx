@@ -18,7 +18,7 @@ export function PhotoPlaceholder({
   className?: string;
   aspect?: string;
   image?: string | undefined;
-  alt?: string;
+  alt?: string | undefined;
 }) {
   if (image) {
     return (
