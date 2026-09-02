@@ -6,15 +6,27 @@ import { cn } from "@/lib/utils";
 const LABEL = "Photo placeholder — image coming later";
 
 /**
- * Small / framed photo slot. Solid warm block with icon + label, no overlay.
+ * Small / framed photo slot. Renders a real image when `image` is provided,
+ * otherwise a solid warm block with icon + label, no overlay.
  */
 export function PhotoPlaceholder({
   className,
   aspect = "aspect-[4/3]",
+  image,
+  alt = "",
 }: {
   className?: string;
   aspect?: string;
+  image?: string | undefined;
+  alt?: string;
 }) {
+  if (image) {
+    return (
+      <div className={cn("w-full overflow-hidden rounded-3xl bg-placeholder", aspect, className)}>
+        <img src={image} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+      </div>
+    );
+  }
   return (
     <div
       role="img"

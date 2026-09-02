@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
+import legalPadAsset from "@/assets/legal-pad.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillButton } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -44,7 +45,7 @@ function GetStarted() {
               no pressure, no sales script.
             </p>
           </div>
-          <PhotoPlaceholder aspect="aspect-[5/4]" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" image={legalPadAsset.url} alt="Hands writing notes on a legal pad" />
         </div>
       </Section>
 
