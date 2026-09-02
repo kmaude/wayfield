@@ -94,7 +94,7 @@ function Packages() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 border-t border-border pt-6">
+              <div className="mt-auto border-t border-border pt-6">
                 <p className="text-sm text-brown">
                   <span className="font-semibold text-indigo">Price:</span> Talk to us
                 </p>
