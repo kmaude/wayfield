@@ -35,7 +35,10 @@ function Index() {
   return (
     <>
       {/* Hero */}
-      <PhotoHero minHeight="min-h-[560px] md:min-h-[660px]">
+      <PhotoHero
+        minHeight="min-h-[560px] md:min-h-[660px]"
+        backgroundImage={heroOwnerAsset.url}
+      >
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] lg:leading-[1.08]">
             Real marketing help, without needing to become a tech person.
