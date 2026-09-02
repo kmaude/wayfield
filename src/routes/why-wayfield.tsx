@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 
 import legalPadAsset from "@/assets/legal-pad.png.asset.json";
 import reviewingDocumentAsset from "@/assets/reviewing-document.png.asset.json";
+import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -36,7 +37,7 @@ function WhyWayfield() {
 
       <Section tone="white">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <PhotoPlaceholder aspect="aspect-[4/3]" image={reviewingDocumentAsset.url} alt="Two people reviewing a printed document together" />
+          <PhotoPlaceholder aspect="aspect-[4/3]" image={whiteboardPlanAsset.url} alt="Person sketching a marketing plan on a whiteboard" />
           <div>
             <SectionHeading title="Built by people who've actually run agencies." />
             <p className="body-lg mt-6">
