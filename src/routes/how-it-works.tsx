@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import phoneCallAsset from "@/assets/phone-call.png.asset.json";
+import cafeConversationAsset from "@/assets/cafe-conversation.png.asset.json";
 import tabletCounterAsset from "@/assets/tablet-counter.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
@@ -30,7 +30,7 @@ const STEPS = [
   },
   {
     title: "When you want more done for you, just say so.",
-    image: phoneCallAsset.url,
+    image: cafeConversationAsset.url,
     body: "Some businesses stay hands-on forever, and that's fine. Others reach a point where they'd rather have a real team running things. When that day comes, you tell us, and we move you into Growth or Complete. No pressure, no sales pitch, just a conversation about what you need next.",
   },
 ];
@@ -66,9 +66,14 @@ function HowItWorks() {
                   {i + 1}
                 </span>
                 <h2 className="mt-6 text-3xl md:text-4xl lg:leading-[1.15]">{step.title}</h2>
-                <p className="body-lg mt-5">{step.body}</p>
+              <p className="body-lg mt-5">{step.body}</p>
               </div>
-              <PhotoPlaceholder aspect="aspect-[4/3]" image={step.image} className={cn(i % 2 === 1 && "lg:order-1")} />
+              <PhotoPlaceholder
+                aspect="aspect-[4/3]"
+                image={step.image}
+                alt={i === 2 ? "Two people talking at a cafe table" : undefined}
+                className={cn(i % 2 === 1 && "lg:order-1")}
+              />
             </div>
           ))}
         </div>

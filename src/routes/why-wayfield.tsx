@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
-import cafeConversationAsset from "@/assets/cafe-conversation.png.asset.json";
+import legalPadAsset from "@/assets/legal-pad.png.asset.json";
 import reviewingDocumentAsset from "@/assets/reviewing-document.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
@@ -30,7 +30,7 @@ function WhyWayfield() {
       <Section tone="cream" className="pb-12 md:pb-16">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <SectionHeading as="h1" eyebrow="Why Wayfield" title="We've been where you are." />
-          <PhotoPlaceholder aspect="aspect-[5/4]" image={cafeConversationAsset.url} alt="Two people talking over coffee at a small cafe table" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" image={legalPadAsset.url} alt="Hands writing on a legal pad at a desk" />
         </div>
       </Section>
 
