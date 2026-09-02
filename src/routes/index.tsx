@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import heroOwnerAsset from "@/assets/hero-owner.png.asset.json";
 import mainStreetAsset from "@/assets/main-street.png.asset.json";
+import startingPointOwnerAsset from "@/assets/starting-point-owner.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
