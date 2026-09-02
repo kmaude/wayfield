@@ -39,22 +39,36 @@ export function PhotoHero({
   className,
   align = "left",
   minHeight = "min-h-[520px] md:min-h-[600px]",
+  backgroundImage,
 }: {
   children: ReactNode;
   className?: string;
   align?: "left" | "center";
   minHeight?: string;
+  backgroundImage?: string;
 }) {
   return (
     <section className={cn("relative isolate overflow-hidden bg-placeholder", minHeight, className)}>
-      {/* Placeholder marker (sits beneath overlay) */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-5 z-0 flex flex-col items-center gap-2 text-on-photo/70"
-      >
-        <ImageIcon className="h-6 w-6" strokeWidth={1.5} />
-        <span className="text-xs font-medium tracking-wide">{LABEL}</span>
-      </div>
+      {backgroundImage ? (
+        <>
+          <img
+            src={backgroundImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 z-0 h-full w-full object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/55" />
+        </>
+      ) : (
+        /* Placeholder marker (sits beneath overlay) */
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-5 z-0 flex flex-col items-center gap-2 text-on-photo/70"
+        >
+          <ImageIcon className="h-6 w-6" strokeWidth={1.5} />
+          <span className="text-xs font-medium tracking-wide">{LABEL}</span>
+        </div>
+      )}
       {/* Navy overlay */}
       <div aria-hidden="true" className="absolute inset-0 z-0 bg-overlay" />
       <div
