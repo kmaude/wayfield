@@ -73,6 +73,8 @@ function ForYourBusiness() {
         </div>
       </PhotoHero>
 
+      <div className="h-3 bg-cream" />
+
       {INDUSTRIES.map((ind, i) => (
         <div key={ind.eyebrow}>
           {i > 0 && <div className="h-3 bg-cream" />}
