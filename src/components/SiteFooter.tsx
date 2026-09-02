@@ -1,0 +1,42 @@
+import { Link } from "@tanstack/react-router";
+
+import { Logo } from "@/components/Logo";
+
+const LINKS = [
+  { to: "/", label: "Home" },
+  { to: "/how-it-works", label: "How it works" },
+  { to: "/packages", label: "Packages" },
+  { to: "/for-your-business", label: "For your business" },
+  { to: "/why-wayfield", label: "Why Wayfield" },
+  { to: "/faq", label: "FAQ" },
+  { to: "/get-started", label: "Get started" },
+] as const;
+
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-border bg-bone">
+      <div className="container-site flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-3">
+          <Link to="/" aria-label="Wayfield home">
+            <Logo />
+          </Link>
+          <p className="text-sm text-brown">Wayfield — real marketing help for real businesses.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-indigo/80">
+            {LINKS.map((l) => (
+              <li key={l.to}>
+                <Link to={l.to} className="transition-colors hover:text-indigo">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      <div className="container-site pb-8 text-xs text-slate">
+        © {new Date().getFullYear()} Wayfield. All rights reserved.
+      </div>
+    </footer>
+  );
+}
