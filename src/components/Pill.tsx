@@ -27,7 +27,11 @@ export const pillVariants = cva(
 );
 
 type PillLinkProps = LinkProps &
-  VariantProps<typeof pillVariants> & { className?: string; children: ReactNode };
+  VariantProps<typeof pillVariants> & {
+    className?: string;
+    children: ReactNode;
+    onClick?: () => void;
+  };
 
 export function PillLink({ variant, size, className, children, ...props }: PillLinkProps) {
   return (
