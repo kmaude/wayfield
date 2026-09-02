@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
-import consultationAsset from "@/assets/consultation.png.asset.json";
-import landscaperAsset from "@/assets/landscaper.png.asset.json";
-import mainStreetAsset from "@/assets/main-street.png.asset.json";
-import restaurantOwnerAsset from "@/assets/restaurant-owner.png.asset.json";
 import { PhotoHero } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section } from "@/components/Section";
@@ -22,7 +18,6 @@ export const Route = createFileRoute("/for-your-business")({
 const INDUSTRIES = [
   {
     eyebrow: "Local services",
-    image: landscaperAsset.url,
     title: "The phone should be ringing because people found you, not just because they already knew you.",
     body: "Referrals are great until they slow down. Local service businesses need a steady, visible presence so new customers can find you when they search, not just when someone happens to mention your name. Wayfield keeps your online presence active and your reputation visible, so the work keeps coming in.",
     focus: [
@@ -34,7 +29,6 @@ const INDUSTRIES = [
   },
   {
     eyebrow: "Restaurants",
-    image: restaurantOwnerAsset.url,
     title: "Full tables start with people seeing you before they're hungry.",
     body: "Menus change, specials come and go, and there's never enough time in the day to post about all of it. Wayfield keeps your social presence active and your regulars (and soon-to-be regulars) in the loop, without you having to think about it every day.",
     focus: [
@@ -46,7 +40,6 @@ const INDUSTRIES = [
   },
   {
     eyebrow: "Professional services",
-    image: consultationAsset.url,
     title: "Trust is the whole business. Your marketing should build it.",
     body: "Whether you're a law office, an accounting practice, or a consultancy, people choose you because they trust you. Wayfield helps you stay visible and credible in your community, so the right people find you before they ever need to ask around.",
     focus: [
@@ -61,7 +54,7 @@ const INDUSTRIES = [
 function ForYourBusiness() {
   return (
     <>
-      <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={mainStreetAsset.url}>
+      <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">
             Marketing built around your industry, not a generic template.
@@ -76,7 +69,7 @@ function ForYourBusiness() {
       {INDUSTRIES.map((ind, i) => (
         <div key={ind.eyebrow}>
           {i > 0 && <div className="h-3 bg-cream" />}
-          <PhotoHero minHeight="min-h-[560px]" backgroundImage={ind.image}>
+          <PhotoHero minHeight="min-h-[560px]">
             <div className="max-w-3xl">
               <span className="eyebrow text-on-photo/80">{ind.eyebrow}</span>
               <h2 className="mt-3 text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
