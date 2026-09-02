@@ -198,7 +198,12 @@ function Index() {
               Get started
             </PillLink>
           </div>
-          <PhotoPlaceholder aspect="aspect-[5/4]" className="order-1 lg:order-2" />
+          <PhotoPlaceholder
+            aspect="aspect-[5/4]"
+            className="order-1 lg:order-2"
+            image={startingPointOwnerAsset.url}
+            alt="Small business owner sitting at a desk in the early morning"
+          />
         </div>
       </Section>
     </>
