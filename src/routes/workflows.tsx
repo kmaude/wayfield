@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check } from "lucide-react";
 
 import consultationAsset from "@/assets/consultation.png.asset.json";
 import landscaperAsset from "@/assets/landscaper.png.asset.json";
@@ -7,111 +6,75 @@ import mainStreetAsset from "@/assets/main-street.png.asset.json";
 import restaurantOwnerAsset from "@/assets/restaurant-owner.png.asset.json";
 import { PhotoHero } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
-import { Section } from "@/components/Section";
+import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/for-your-business")({
-  head: () =>
-    pageHead(
-      "For your business — Wayfield",
-      "Marketing built around your industry, not a generic template. Wayfield works with local services, restaurants, and professional practices.",
-    ),
-  component: ForYourBusiness,
+export const Route = createFileRoute("/workflows")({
+  head: () => pageHead("Agency campaign workflows | Wayfield", "Explore Wayfield workflows for campaign planning, activation, pacing, optimization, and client-ready reporting across every major channel."),
+  component: Workflows,
 });
 
-const INDUSTRIES = [
+const WORKFLOWS = [
   {
-    eyebrow: "Local services",
+    title: "Campaign planning",
     image: landscaperAsset.url,
-    title: "The phone should be ringing because people found you, not just because they already knew you.",
-    body: "Referrals are great until they slow down. Local service businesses need a steady, visible presence so new customers can find you when they search, not just when someone happens to mention your name. Wayfield keeps your online presence active and your reputation visible, so the work keeps coming in.",
-    focus: [
-      "Local visibility and reviews",
-      "Before-and-after style content that shows your work",
-      "Staying top of mind between jobs",
-    ],
-    cta: "Talk to us about your business",
+    alt: "Agency strategist preparing a campaign plan for a client account",
+    body: "Start with a short brief: what the client sells, who they want to reach, what success looks like, and the budget. Wayfield turns it into a plan your team can review and approve: audiences, channel mix, budget split, and flight dates. No blank page, no starting from scratch for every new account.",
   },
   {
-    eyebrow: "Restaurants",
+    title: "Campaign activation",
     image: restaurantOwnerAsset.url,
-    title: "Full tables start with people seeing you before they're hungry.",
-    body: "Menus change, specials come and go, and there's never enough time in the day to post about all of it. Wayfield keeps your social presence active and your regulars (and soon-to-be regulars) in the loop, without you having to think about it every day.",
-    focus: [
-      "Consistent, appetizing content without the daily effort",
-      "Promoting specials and events",
-      "Building the kind of local buzz that fills tables",
-    ],
-    cta: "Talk to us about your restaurant",
+    alt: "Campaign specialist preparing to activate a client campaign",
+    body: "Once a plan is approved, push it live across Meta, TikTok, LinkedIn, Google and YouTube without rebuilding it in each platform. Campaign structure, targeting, and budgets are set up the way each channel expects them. From brief to live in about thirty minutes.",
   },
   {
-    eyebrow: "Professional services",
+    title: "Pacing and optimization",
     image: consultationAsset.url,
-    title: "Trust is the whole business. Your marketing should build it.",
-    body: "Whether you're a law office, an accounting practice, or a consultancy, people choose you because they trust you. Wayfield helps you stay visible and credible in your community, so the right people find you before they ever need to ask around.",
-    focus: [
-      "Building a credible, professional presence",
-      "Staying visible in your local market",
-      "Content that builds trust before the first conversation",
-    ],
-    cta: "Talk to us about your practice",
+    alt: "Agency team reviewing client campaign pacing and performance",
+    body: "A campaign with a $30,000 monthly budget should spend about $1,000 a day. Wayfield checks pacing daily across every channel, flags campaigns that are behind or overspending, and recommends the adjustment. Your team stays ahead of problems instead of finding them at month end.",
+  },
+  {
+    title: "Reporting",
+    image: mainStreetAsset.url,
+    alt: "Agency team preparing a client-ready campaign report",
+    body: "Pull performance reports and cross-channel comparisons for any connected account in a few clicks. Executive summary, spend versus plan, key findings, audience and regional breakdowns, and recommendations for next steps. Ready to send, in your agency's name.",
   },
 ];
 
-function ForYourBusiness() {
+function Workflows() {
   return (
     <>
       <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={mainStreetAsset.url}>
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">
-            Marketing built around your industry, not a generic template.
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-on-photo/90 md:text-xl">
-            We work with local services, restaurants, and professional practices. Here's what that
-            looks like for each.
-          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">The workflows.</h1>
+          <p className="mt-6 text-lg leading-relaxed text-on-photo/90 md:text-xl">Everything in Wayfield is included at every tier. What follows is what each workflow does for your team.</p>
         </div>
       </PhotoHero>
 
-      <div className="h-3 bg-cream" />
-
-      {INDUSTRIES.map((ind, i) => (
-        <div key={ind.eyebrow}>
-          {i > 0 && <div className="h-3 bg-cream" />}
-          <PhotoHero minHeight="min-h-[560px]" backgroundImage={ind.image}>
-            <div className="max-w-3xl">
-              <span className="eyebrow text-on-photo/80">{ind.eyebrow}</span>
-              <h2 className="mt-3 text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
-                {ind.title}
-              </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-on-photo/90">{ind.body}</p>
-              <ul className="mt-7 flex flex-col gap-2.5">
-                {ind.focus.map((f) => (
-                  <li key={f} className="flex items-center gap-3 font-medium">
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-on-photo/15">
-                      <Check className="h-3.5 w-3.5" strokeWidth={3} />
-                    </span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <PillLink to="/get-started" variant="cta" size="lg" className="mt-9">
-                {ind.cta}
-              </PillLink>
-            </div>
-          </PhotoHero>
-        </div>
-      ))}
-
       <Section tone="cream">
-        <div className="container-site mx-auto max-w-2xl text-center">
-          <p className="body-lg">
-            These are where we've built the deepest experience, but we work with all kinds of small
-            businesses. Reach out and tell us about yours.
-          </p>
-          <PillLink to="/get-started" variant="primary" size="lg" className="mt-8">
-            Tell us about your business
-          </PillLink>
+        <div className="container-site flex flex-col gap-20 md:gap-28">
+          {WORKFLOWS.map((workflow, i) => (
+            <div key={workflow.title} className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+              <div className={i % 2 === 1 ? "lg:order-2" : undefined}>
+                <SectionHeading eyebrow={String(i + 1).padStart(2, "0")} title={workflow.title} />
+                <p className="body-lg mt-6">{workflow.body}</p>
+              </div>
+              <PhotoHero minHeight="min-h-[420px]" backgroundImage={workflow.image} className={i % 2 === 1 ? "lg:order-1 rounded-3xl" : "rounded-3xl"}>
+                <span className="sr-only">{workflow.alt}</span>
+              </PhotoHero>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="bone">
+        <div className="container-site text-center">
+          <SectionHeading eyebrow="Channels" title="Every major channel, at every tier." className="items-center" />
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 font-heading font-semibold text-indigo">
+            <span>Meta (Facebook and Instagram)</span><span>TikTok</span><span>LinkedIn</span><span>Google Ads</span><span>YouTube</span>
+          </div>
+          <p className="body-lg mx-auto mt-6 max-w-3xl">Wayfield sits above the platforms and optimizes across all of them, so no single channel gets favored.</p>
+          <PillLink to="/get-started" variant="cta" size="lg" className="mt-8">Start your 14-day free trial</PillLink>
         </div>
       </Section>
     </>
