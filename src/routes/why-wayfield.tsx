@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 import foundersWalkAsset from "@/assets/founders-walk.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
