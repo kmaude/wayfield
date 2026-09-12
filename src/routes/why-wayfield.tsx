@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
-import legalPadAsset from "@/assets/legal-pad.png.asset.json";
+import foundersWalkAsset from "@/assets/founders-walk.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
@@ -25,7 +25,7 @@ function WhyWayfield() {
       <Section tone="cream" className="pb-12 md:pb-16">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <SectionHeading as="h1" eyebrow="Why Wayfield" title="Built by agency people, for agency people." />
-          <PhotoPlaceholder aspect="aspect-[5/4]" image={legalPadAsset.url} alt="Agency founder documenting a proven client workflow" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" image={foundersWalkAsset.url} alt="Wayfield's three founders walking together outside the office" />
         </div>
       </Section>
       <Section tone="white">

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
 
-import heroOwnerAsset from "@/assets/hero-owner.png.asset.json";
-import mainStreetAsset from "@/assets/main-street.png.asset.json";
-import startingPointOwnerAsset from "@/assets/starting-point-owner.png.asset.json";
+import heroAgencyTeamAsset from "@/assets/hero-agency-team.png.asset.json";
+import officeWideAsset from "@/assets/office-wide.png.asset.json";
+import endOfDayAsset from "@/assets/end-of-day.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
@@ -60,7 +60,7 @@ const WORKFLOWS = [
 function Index() {
   return (
     <>
-      <PhotoHero minHeight="min-h-[560px] md:min-h-[660px]" backgroundImage={heroOwnerAsset.url}>
+      <PhotoHero minHeight="min-h-[560px] md:min-h-[660px]" backgroundImage={heroAgencyTeamAsset.url}>
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] lg:leading-[1.08]">
             Run more client campaigns without hiring more people.
@@ -119,7 +119,7 @@ function Index() {
         </div>
       </Section>
 
-      <PhotoHero minHeight="min-h-[460px] md:min-h-[520px]" backgroundImage={mainStreetAsset.url}>
+      <PhotoHero minHeight="min-h-[460px] md:min-h-[520px]" backgroundImage={officeWideAsset.url}>
         <div className="max-w-4xl">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">Priced by accounts, not by features.</h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-on-photo/90">Every tier includes every workflow and every channel. You pay for the number of client accounts you connect, so the only thing that changes as you grow is the number you manage.</p>
@@ -164,7 +164,7 @@ function Index() {
             <p className="body-lg mt-5">Connect one account, run the workflows, and see the reports before you decide. No credit card to start.</p>
             <PillLink to="/get-started" variant="cta" size="lg" className="mt-8">Start free trial</PillLink>
           </div>
-          <PhotoPlaceholder aspect="aspect-[5/4]" className="order-1 lg:order-2" image={startingPointOwnerAsset.url} alt="Agency owner reviewing a client campaign plan at a desk" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" className="order-1 lg:order-2" image={endOfDayAsset.url} alt="Agency owner closing a laptop at the end of the day" />
         </div>
       </Section>
     </>
