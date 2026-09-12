@@ -5,7 +5,7 @@ import planningOverheadAsset from "@/assets/planning-overhead.png.asset.json";
 import reportingMeetingAsset from "@/assets/reporting-meeting.png.asset.json";
 import officeWideAsset from "@/assets/office-wide.png.asset.json";
 import activationLaptopAsset from "@/assets/activation-laptop.png.asset.json";
-import { PhotoHero } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
