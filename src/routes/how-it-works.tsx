@@ -2,9 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import activateMonitorAsset from "@/assets/activate-monitor.png.asset.json";
 import connectAccountsAsset from "@/assets/connect-accounts.png.asset.json";
+import howItWorksHeroAsset from "@/assets/how-it-works-hero.png.asset.json";
 import planBriefAsset from "@/assets/plan-brief.png.asset.json";
 import reportHandoffAsset from "@/assets/report-handoff.png.asset.json";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
 import { cn } from "@/lib/utils";
