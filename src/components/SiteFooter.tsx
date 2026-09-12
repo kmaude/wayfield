@@ -3,13 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { Logo } from "@/components/Logo";
 
 const LINKS = [
-  { to: "/", label: "Home" },
   { to: "/how-it-works", label: "How it works" },
+  { to: "/workflows", label: "Workflows" },
   { to: "/packages", label: "Packages" },
-  { to: "/for-your-business", label: "For your business" },
   { to: "/why-wayfield", label: "Why Wayfield" },
   { to: "/faq", label: "FAQ" },
-  { to: "/get-started", label: "Get started" },
+  { to: "/get-started", label: "Start free trial" },
 ] as const;
 
 export function SiteFooter() {
@@ -20,7 +19,7 @@ export function SiteFooter() {
           <Link to="/" aria-label="Wayfield home">
             <Logo />
           </Link>
-          <p className="text-sm text-brown">Wayfield — real marketing help for real businesses.</p>
+          <p className="text-sm text-brown">Agency workflows, done for you. Built by people who have run agencies.</p>
         </div>
         <nav aria-label="Footer">
           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-indigo/80">

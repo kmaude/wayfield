@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-const LABEL = "Photo placeholder — image coming later";
+const LABEL = "Photo placeholder, image coming later";
 
 /**
  * Small / framed photo slot. Renders a real image when `image` is provided,

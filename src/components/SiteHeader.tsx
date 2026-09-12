@@ -6,8 +6,9 @@ import { Logo } from "@/components/Logo";
 import { PillLink } from "@/components/Pill";
 
 const NAV = [
+  { to: "/how-it-works", label: "How it works" },
+  { to: "/workflows", label: "Workflows" },
   { to: "/packages", label: "Packages" },
-  { to: "/for-your-business", label: "For your business" },
   { to: "/why-wayfield", label: "Why Wayfield" },
   { to: "/faq", label: "FAQ" },
 ] as const;
@@ -33,8 +34,8 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <PillLink to="/get-started" variant="primary">
-            Get started
+          <PillLink to="/get-started" variant="cta">
+            Start free trial
           </PillLink>
         </nav>
 
@@ -70,11 +71,11 @@ export function SiteHeader() {
             ))}
             <PillLink
               to="/get-started"
-              variant="primary"
+              variant="cta"
               className="mt-2 w-full"
               onClick={() => setOpen(false)}
             >
-              Get started
+              Start free trial
             </PillLink>
           </div>
         </nav>

@@ -11,11 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FaqRouteImport } from './routes/faq'
-import { Route as ForYourBusinessRouteImport } from './routes/for-your-business'
 import { Route as GetStartedRouteImport } from './routes/get-started'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as WhyWayfieldRouteImport } from './routes/why-wayfield'
+import { Route as WorkflowsRouteImport } from './routes/workflows'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -25,11 +25,6 @@ const IndexRoute = IndexRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ForYourBusinessRoute = ForYourBusinessRouteImport.update({
-  id: '/for-your-business',
-  path: '/for-your-business',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GetStartedRoute = GetStartedRouteImport.update({
@@ -52,73 +47,78 @@ const WhyWayfieldRoute = WhyWayfieldRouteImport.update({
   path: '/why-wayfield',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkflowsRoute = WorkflowsRouteImport.update({
+  id: '/workflows',
+  path: '/workflows',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/faq': typeof FaqRoute
-  '/for-your-business': typeof ForYourBusinessRoute
   '/get-started': typeof GetStartedRoute
   '/how-it-works': typeof HowItWorksRoute
   '/packages': typeof PackagesRoute
   '/why-wayfield': typeof WhyWayfieldRoute
+  '/workflows': typeof WorkflowsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/faq': typeof FaqRoute
-  '/for-your-business': typeof ForYourBusinessRoute
   '/get-started': typeof GetStartedRoute
   '/how-it-works': typeof HowItWorksRoute
   '/packages': typeof PackagesRoute
   '/why-wayfield': typeof WhyWayfieldRoute
+  '/workflows': typeof WorkflowsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/faq': typeof FaqRoute
-  '/for-your-business': typeof ForYourBusinessRoute
   '/get-started': typeof GetStartedRoute
   '/how-it-works': typeof HowItWorksRoute
   '/packages': typeof PackagesRoute
   '/why-wayfield': typeof WhyWayfieldRoute
+  '/workflows': typeof WorkflowsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/faq'
-    | '/for-your-business'
     | '/get-started'
     | '/how-it-works'
     | '/packages'
     | '/why-wayfield'
+    | '/workflows'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/faq'
-    | '/for-your-business'
     | '/get-started'
     | '/how-it-works'
     | '/packages'
     | '/why-wayfield'
+    | '/workflows'
   id:
     | '__root__'
     | '/'
     | '/faq'
-    | '/for-your-business'
     | '/get-started'
     | '/how-it-works'
     | '/packages'
     | '/why-wayfield'
+    | '/workflows'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FaqRoute: typeof FaqRoute
-  ForYourBusinessRoute: typeof ForYourBusinessRoute
   GetStartedRoute: typeof GetStartedRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PackagesRoute: typeof PackagesRoute
   WhyWayfieldRoute: typeof WhyWayfieldRoute
+  WorkflowsRoute: typeof WorkflowsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -135,13 +135,6 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/for-your-business': {
-      id: '/for-your-business'
-      path: '/for-your-business'
-      fullPath: '/for-your-business'
-      preLoaderRoute: typeof ForYourBusinessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/get-started': {
@@ -172,17 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhyWayfieldRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/workflows': {
+      id: '/workflows'
+      path: '/workflows'
+      fullPath: '/workflows'
+      preLoaderRoute: typeof WorkflowsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FaqRoute: FaqRoute,
-  ForYourBusinessRoute: ForYourBusinessRoute,
   GetStartedRoute: GetStartedRoute,
   HowItWorksRoute: HowItWorksRoute,
   PackagesRoute: PackagesRoute,
   WhyWayfieldRoute: WhyWayfieldRoute,
+  WorkflowsRoute: WorkflowsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
