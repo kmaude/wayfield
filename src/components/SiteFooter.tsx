@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import { Logo } from "@/components/Logo";
+import { PillLink } from "@/components/Pill";
 
 const LINKS = [
   { to: "/how-it-works", label: "How it works" },
@@ -8,7 +9,6 @@ const LINKS = [
   { to: "/packages", label: "Packages" },
   { to: "/why-wayfield", label: "Why wayfield" },
   { to: "/faq", label: "FAQ" },
-  { to: "/get-started", label: "Start free trial" },
 ] as const;
 
 export function SiteFooter() {
