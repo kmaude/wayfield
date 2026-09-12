@@ -2,9 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import activateMonitorAsset from "@/assets/activate-monitor.png.asset.json";
 import connectAccountsAsset from "@/assets/connect-accounts.png.asset.json";
+import howItWorksHeroAsset from "@/assets/how-it-works-hero.png.asset.json";
 import planBriefAsset from "@/assets/plan-brief.png.asset.json";
 import reportHandoffAsset from "@/assets/report-handoff.png.asset.json";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
 import { cn } from "@/lib/utils";
@@ -25,15 +26,10 @@ const STEPS = [
 function HowItWorks() {
   return (
     <>
-      <Section tone="cream" className="pb-12 md:pb-16">
-        <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeading as="h1" eyebrow="How it works" title="How Wayfield works." />
-            <p className="body-lg mt-6">Four steps from a new client to a campaign you can report on.</p>
-          </div>
-          <PhotoPlaceholder aspect="aspect-[5/4]" />
-        </div>
-      </Section>
+      <PhotoHero backgroundImage={howItWorksHeroAsset.url}>
+        <SectionHeading as="h1" eyebrow="How it works" title="How Wayfield works." />
+        <p className="body-lg mt-6 max-w-2xl">Four steps from a new client to a campaign you can report on.</p>
+      </PhotoHero>
       <Section tone="white">
         <div className="container-site flex flex-col gap-20 md:gap-28">
           {STEPS.map((step, i) => (
