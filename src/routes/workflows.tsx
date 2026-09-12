@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import consultationAsset from "@/assets/consultation.png.asset.json";
-import landscaperAsset from "@/assets/landscaper.png.asset.json";
-import mainStreetAsset from "@/assets/main-street.png.asset.json";
-import restaurantOwnerAsset from "@/assets/restaurant-owner.png.asset.json";
+import pacingTabletAsset from "@/assets/pacing-tablet.png.asset.json";
+import planningOverheadAsset from "@/assets/planning-overhead.png.asset.json";
+import reportingMeetingAsset from "@/assets/reporting-meeting.png.asset.json";
+import officeWideAsset from "@/assets/office-wide.png.asset.json";
+import activationLaptopAsset from "@/assets/activation-laptop.png.asset.json";
 import { PhotoHero } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -17,25 +18,25 @@ export const Route = createFileRoute("/workflows")({
 const WORKFLOWS = [
   {
     title: "Campaign planning",
-    image: landscaperAsset.url,
+    image: planningOverheadAsset.url,
     alt: "Agency strategist preparing a campaign plan for a client account",
     body: "Start with a short brief: what the client sells, who they want to reach, what success looks like, and the budget. Wayfield turns it into a plan your team can review and approve: audiences, channel mix, budget split, and flight dates. No blank page, no starting from scratch for every new account.",
   },
   {
     title: "Campaign activation",
-    image: restaurantOwnerAsset.url,
+    image: activationLaptopAsset.url,
     alt: "Campaign specialist preparing to activate a client campaign",
     body: "Once a plan is approved, push it live across Meta, TikTok, LinkedIn, Google and YouTube without rebuilding it in each platform. Campaign structure, targeting, and budgets are set up the way each channel expects them. From brief to live in about thirty minutes.",
   },
   {
     title: "Pacing and optimization",
-    image: consultationAsset.url,
+    image: pacingTabletAsset.url,
     alt: "Agency team reviewing client campaign pacing and performance",
     body: "A campaign with a $30,000 monthly budget should spend about $1,000 a day. Wayfield checks pacing daily across every channel, flags campaigns that are behind or overspending, and recommends the adjustment. Your team stays ahead of problems instead of finding them at month end.",
   },
   {
     title: "Reporting",
-    image: mainStreetAsset.url,
+    image: reportingMeetingAsset.url,
     alt: "Agency team preparing a client-ready campaign report",
     body: "Pull performance reports and cross-channel comparisons for any connected account in a few clicks. Executive summary, spend versus plan, key findings, audience and regional breakdowns, and recommendations for next steps. Ready to send, in your agency's name.",
   },
@@ -44,7 +45,7 @@ const WORKFLOWS = [
 function Workflows() {
   return (
     <>
-      <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={mainStreetAsset.url}>
+      <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={officeWideAsset.url}>
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">The workflows.</h1>
           <p className="mt-6 text-lg leading-relaxed text-on-photo/90 md:text-xl">Everything in Wayfield is included at every tier. What follows is what each workflow does for your team.</p>

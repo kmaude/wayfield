@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
-import phoneCallAsset from "@/assets/phone-call.png.asset.json";
+import trialVideoCallAsset from "@/assets/trial-video-call.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillButton } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
@@ -28,7 +28,7 @@ function GetStarted() {
             <SectionHeading as="h1" eyebrow="Get started" title="Start your 14-day free trial." />
             <p className="body-lg mt-6">Tell us a little about your agency and we will get you set up with one client account. No credit card required.</p>
           </div>
-          <PhotoPlaceholder aspect="aspect-[5/4]" image={phoneCallAsset.url} alt="Agency owner speaking with the Wayfield team about a free trial" />
+          <PhotoPlaceholder aspect="aspect-[5/4]" image={trialVideoCallAsset.url} alt="Agency owner on a video call with the Wayfield team" />
         </div>
       </Section>
       <Section tone="bone">
