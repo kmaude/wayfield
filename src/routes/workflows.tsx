@@ -7,6 +7,7 @@ import officeWideAsset from "@/assets/office-wide.png.asset.json";
 import activationLaptopAsset from "@/assets/activation-laptop.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
+import { cn } from "@/lib/utils";
 import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
