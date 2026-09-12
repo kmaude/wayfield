@@ -22,7 +22,7 @@ export function SiteFooter() {
           <p className="text-sm text-brown">Agency workflows, done for you. Built by people who have run agencies.</p>
         </div>
         <nav aria-label="Footer">
-          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-indigo/80">
+          <ul className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-indigo/80">
             {LINKS.map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="transition-colors hover:text-indigo">
@@ -30,6 +30,11 @@ export function SiteFooter() {
                 </Link>
               </li>
             ))}
+            <li>
+              <PillLink to="/get-started" variant="cta" size="sm">
+                Start free trial
+              </PillLink>
+            </li>
           </ul>
         </nav>
       </div>
