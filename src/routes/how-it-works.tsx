@@ -16,10 +16,10 @@ export const Route = createFileRoute("/how-it-works")({
 });
 
 const STEPS = [
-  { title: "Connect your client's accounts", image: tabletCounterAsset.url, alt: "Agency team member connecting a client's campaign accounts", body: "Link the ad and social accounts for each client you manage: Meta, TikTok, LinkedIn, Google and YouTube. Every channel is included at every tier." },
-  { title: "Plan the campaign", image: undefined as string | undefined, alt: undefined as string | undefined, body: "Answer a short set of questions about the client, the offer, the goal, and the budget. Wayfield produces a plan with audiences, channel mix, budget split, and flighting. Adjust anything before you approve it." },
-  { title: "Activate and optimize", image: cafeConversationAsset.url, alt: "Agency team discussing campaign activation and optimization", body: "Push the approved plan live from one place. Wayfield checks pacing daily against budget and flight dates and tells you when a campaign is behind, ahead, or overspending, with a recommended fix." },
-  { title: "Report to the client", image: undefined as string | undefined, alt: undefined as string | undefined, body: "Generate client-ready performance reports and cross-channel comparisons in a few clicks. Your branding, your voice, delivered on your schedule." },
+  { title: "Connect your client's accounts", image: connectAccountsAsset.url as string | undefined, alt: "Hands typing on a laptop while connecting client accounts" as string | undefined, body: "Link the ad and social accounts for each client you manage: Meta, TikTok, LinkedIn, Google and YouTube. Every channel is included at every tier." },
+  { title: "Plan the campaign", image: planBriefAsset.url as string | undefined, alt: "Two agency staff reviewing a printed campaign brief" as string | undefined, body: "Answer a short set of questions about the client, the offer, the goal, and the budget. Wayfield produces a plan with audiences, channel mix, budget split, and flighting. Adjust anything before you approve it." },
+  { title: "Activate and optimize", image: activateMonitorAsset.url as string | undefined, alt: "Agency specialist reviewing a campaign dashboard" as string | undefined, body: "Push the approved plan live from one place. Wayfield checks pacing daily against budget and flight dates and tells you when a campaign is behind, ahead, or overspending, with a recommended fix." },
+  { title: "Report to the client", image: reportHandoffAsset.url as string | undefined, alt: "Agency lead handing a performance report to a client" as string | undefined, body: "Generate client-ready performance reports and cross-channel comparisons in a few clicks. Your branding, your voice, delivered on your schedule." },
 ];
 
 function HowItWorks() {
