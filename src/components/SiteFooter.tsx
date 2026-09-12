@@ -6,7 +6,7 @@ const LINKS = [
   { to: "/how-it-works", label: "How it works" },
   { to: "/workflows", label: "Workflows" },
   { to: "/packages", label: "Packages" },
-  { to: "/why-wayfield", label: "Why Wayfield" },
+  { to: "/why-wayfield", label: "Why wayfield" },
   { to: "/faq", label: "FAQ" },
   { to: "/get-started", label: "Start free trial" },
 ] as const;

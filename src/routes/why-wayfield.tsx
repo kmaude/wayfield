@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 import foundersWalkAsset from "@/assets/founders-walk.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
@@ -22,12 +22,12 @@ const VALUES = [
 function WhyWayfield() {
   return (
     <>
-      <Section tone="cream" className="pb-12 md:pb-16">
-        <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <SectionHeading as="h1" eyebrow="Why Wayfield" title="Built by agency people, for agency people." />
-          <PhotoPlaceholder aspect="aspect-[5/4]" image={foundersWalkAsset.url} alt="Wayfield's three founders walking together outside the office" />
+      <PhotoHero align="left" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={foundersWalkAsset.url}>
+        <div className="max-w-3xl">
+          <span className="eyebrow">Why wayfield</span>
+          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">Built by agency people, for agency people.</h1>
         </div>
-      </Section>
+      </PhotoHero>
       <Section tone="white">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <PhotoPlaceholder aspect="aspect-[4/3]" image={whiteboardPlanAsset.url} alt="Agency team mapping campaign workflows on a whiteboard" />
