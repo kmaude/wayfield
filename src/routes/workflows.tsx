@@ -5,8 +5,9 @@ import planningOverheadAsset from "@/assets/planning-overhead.png.asset.json";
 import reportingMeetingAsset from "@/assets/reporting-meeting.png.asset.json";
 import officeWideAsset from "@/assets/office-wide.png.asset.json";
 import activationLaptopAsset from "@/assets/activation-laptop.png.asset.json";
-import { PhotoHero } from "@/components/PhotoPlaceholder";
+import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
+import { cn } from "@/lib/utils";
 import { Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
@@ -60,9 +61,7 @@ function Workflows() {
                 <SectionHeading eyebrow={String(i + 1).padStart(2, "0")} title={workflow.title} />
                 <p className="body-lg mt-6">{workflow.body}</p>
               </div>
-              <PhotoHero minHeight="min-h-[420px]" backgroundImage={workflow.image} className={i % 2 === 1 ? "lg:order-1 rounded-3xl" : "rounded-3xl"}>
-                <span className="sr-only">{workflow.alt}</span>
-              </PhotoHero>
+              <PhotoPlaceholder image={workflow.image} alt={workflow.alt} className={cn("min-h-[420px]", i % 2 === 1 ? "lg:order-1" : undefined)} />
             </div>
           ))}
         </div>
