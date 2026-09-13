@@ -58,7 +58,7 @@ export function HeroCopy({
 }) {
   return (
     <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-      {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+      {eyebrow && <span className={cn("eyebrow", onPhoto && "text-coral")}>{eyebrow}</span>}
       <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">{title}</h1>
       {children && (
         <div className={cn("mt-6 text-lg leading-relaxed md:text-xl", onPhoto ? "text-on-photo/90" : "text-brown")}>
