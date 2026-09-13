@@ -5,7 +5,7 @@ import foundersWalkAsset from "@/assets/founders-walk.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/why-wayfield")({
@@ -22,11 +22,8 @@ const VALUES = [
 function WhyWayfield() {
   return (
     <>
-      <PhotoHero align="left" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={foundersWalkAsset.url}>
-        <div className="max-w-3xl">
-          <span className="eyebrow">Why wayfield</span>
-          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">Built by agency people, for agency people.</h1>
-        </div>
+      <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={foundersWalkAsset.url}>
+        <HeroCopy eyebrow="Why wayfield" title="Built by agency people, for agency people." onPhoto />
       </PhotoHero>
       <Section tone="white">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">

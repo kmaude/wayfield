@@ -7,7 +7,7 @@ import endOfDayAsset from "@/assets/end-of-day.png.asset.json";
 import whiteboardPlanAsset from "@/assets/whiteboard-plan.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -60,19 +60,19 @@ const WORKFLOWS = [
 function Index() {
   return (
     <>
-      <PhotoHero minHeight="min-h-[560px] md:min-h-[660px]" backgroundImage={heroAgencyTeamAsset.url}>
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] lg:leading-[1.08]">
-            Run more client campaigns without hiring more people.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-on-photo/90 md:text-xl">
-            Wayfield gives small marketing agencies the planning, activation, optimization, and reporting workflows that big agencies run on. Connect your clients&apos; accounts, follow the workflow, deliver the work. Built by people who have run agencies.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+      <PhotoHero align="center" minHeight="min-h-[560px] md:min-h-[660px]" backgroundImage={heroAgencyTeamAsset.url}>
+        <HeroCopy
+          title="Run more client campaigns without hiring more people."
+          onPhoto
+          actions={
+            <>
             <PillLink to="/get-started" variant="cta" size="lg">Start your 14-day free trial</PillLink>
             <PillLink to="/workflows" variant="outline-light" size="lg">See the workflows</PillLink>
-          </div>
-        </div>
+            </>
+          }
+        >
+          Wayfield gives small marketing agencies the planning, activation, optimization, and reporting workflows that big agencies run on. Connect your clients&apos; accounts, follow the workflow, deliver the work. Built by people who have run agencies.
+        </HeroCopy>
       </PhotoHero>
 
       <section className="bg-bone py-8">

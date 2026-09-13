@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
 import { PillLink } from "@/components/Pill";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section, SectionHeading } from "@/components/Section";
 import { cn } from "@/lib/utils";
 import { pageHead } from "@/lib/seo";
 
@@ -36,9 +36,10 @@ function Packages() {
   return (
     <>
       <Section tone="cream" className="pb-10 md:pb-14">
-        <div className="container-site mx-auto max-w-3xl text-center">
-          <SectionHeading as="h1" eyebrow="Packages" title="Simple pricing, based on the accounts you connect." className="items-center" />
-          <p className="body-lg mt-6">Every package includes every workflow and every channel. The only difference is how many client accounts you manage in Wayfield.</p>
+        <div className="container-site">
+          <HeroCopy eyebrow="Packages" title="Simple pricing, based on the accounts you connect.">
+            Every package includes every workflow and every channel. The only difference is how many client accounts you manage in Wayfield.
+          </HeroCopy>
         </div>
       </Section>
       <Section tone="cream" className="pt-0 md:pt-0">

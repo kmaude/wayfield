@@ -1,4 +1,4 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -39,6 +39,33 @@ export function SectionHeading({
       >
         {title}
       </Tag>
+    </div>
+  );
+}
+
+export function HeroCopy({
+  eyebrow,
+  title,
+  children,
+  actions,
+  onPhoto = false,
+}: {
+  eyebrow?: string;
+  title: string;
+  children?: ReactNode;
+  actions?: ReactNode;
+  onPhoto?: boolean;
+}) {
+  return (
+    <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+      {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+      <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">{title}</h1>
+      {children && (
+        <div className={cn("mt-6 text-lg leading-relaxed md:text-xl", onPhoto ? "text-on-photo/90" : "text-brown")}>
+          {children}
+        </div>
+      )}
+      {actions && <div className="mt-9 flex flex-wrap justify-center gap-3">{actions}</div>}
     </div>
   );
 }

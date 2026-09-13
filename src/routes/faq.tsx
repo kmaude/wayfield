@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
@@ -35,9 +35,10 @@ function Faq() {
   return (
     <>
       <Section tone="cream" className="pb-10 md:pb-14">
-        <div className="container-site mx-auto max-w-3xl text-center">
-          <SectionHeading as="h1" eyebrow="FAQ" title="Questions agencies ask before getting started." className="items-center" />
-          <p className="body-lg mt-6">If you do not see your question here, <Link to="/get-started" className="font-semibold text-blue underline-offset-4 hover:underline">just ask us directly</Link>.</p>
+        <div className="container-site">
+          <HeroCopy eyebrow="FAQ" title="Questions agencies ask before getting started.">
+            If you do not see your question here, <Link to="/get-started" className="font-semibold text-blue underline-offset-4 hover:underline">just ask us directly</Link>.
+          </HeroCopy>
         </div>
       </Section>
       <Section tone="cream" className="pt-0 md:pt-0">

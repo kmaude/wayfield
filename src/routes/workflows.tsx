@@ -8,7 +8,7 @@ import activationLaptopAsset from "@/assets/activation-laptop.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
 import { cn } from "@/lib/utils";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section, SectionHeading } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/workflows")({
@@ -47,10 +47,9 @@ function Workflows() {
   return (
     <>
       <PhotoHero align="center" minHeight="min-h-[440px] md:min-h-[520px]" backgroundImage={officeWideAsset.url}>
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">The workflows.</h1>
-          <p className="mt-6 text-lg leading-relaxed text-on-photo/90 md:text-xl">Everything in Wayfield is included at every tier. What follows is what each workflow does for your team.</p>
-        </div>
+        <HeroCopy title="The workflows." onPhoto>
+          Everything in Wayfield is included at every tier. What follows is what each workflow does for your team.
+        </HeroCopy>
       </PhotoHero>
 
       <Section tone="cream">

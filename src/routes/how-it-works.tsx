@@ -7,7 +7,7 @@ import planBriefAsset from "@/assets/plan-brief.png.asset.json";
 import reportHandoffAsset from "@/assets/report-handoff.png.asset.json";
 import { PhotoHero, PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillLink } from "@/components/Pill";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section, SectionHeading } from "@/components/Section";
 import { cn } from "@/lib/utils";
 import { pageHead } from "@/lib/seo";
 
@@ -26,9 +26,10 @@ const STEPS = [
 function HowItWorks() {
   return (
     <>
-      <PhotoHero backgroundImage={howItWorksHeroAsset.url}>
-        <SectionHeading as="h1" eyebrow="How it works" title="How Wayfield works." />
-        <p className="body-lg mt-6 max-w-2xl">Four steps from a new client to a campaign you can report on.</p>
+      <PhotoHero align="center" backgroundImage={howItWorksHeroAsset.url}>
+        <HeroCopy eyebrow="How it works" title="How Wayfield works." onPhoto>
+          Four steps from a new client to a campaign you can report on.
+        </HeroCopy>
       </PhotoHero>
       <Section tone="white">
         <div className="container-site flex flex-col gap-20 md:gap-28">
