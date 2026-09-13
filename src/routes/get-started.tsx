@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 import trialVideoCallAsset from "@/assets/trial-video-call.png.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { PillButton } from "@/components/Pill";
-import { Section, SectionHeading } from "@/components/Section";
+import { HeroCopy, Section } from "@/components/Section";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/get-started")({
@@ -25,8 +25,9 @@ function GetStarted() {
       <Section tone="cream" className="pb-12 md:pb-16">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading as="h1" eyebrow="Get started" title="Start your 14-day free trial." />
-            <p className="body-lg mt-6">Tell us a little about your agency and we will get you set up with one client account. No credit card required.</p>
+            <HeroCopy eyebrow="Get started" title="Start your 14-day free trial.">
+              Tell us a little about your agency and we will get you set up with one client account. No credit card required.
+            </HeroCopy>
           </div>
           <PhotoPlaceholder aspect="aspect-[5/4]" image={trialVideoCallAsset.url} alt="Agency owner on a video call with the Wayfield team" />
         </div>
